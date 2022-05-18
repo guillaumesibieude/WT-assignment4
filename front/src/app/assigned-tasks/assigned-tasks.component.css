@@ -1,0 +1,15 @@
+h1 {
+    align-self: center;
+    font-style: oblique;
+    font-size: 300%;
+    color: rgb(13, 103, 103);
+}
+
+.container {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: stretch;
+    padding: 1%;
+}

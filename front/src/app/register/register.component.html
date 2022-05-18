@@ -1,0 +1,30 @@
+<div class="container">
+
+  <input type="hidden" #selection>
+  
+  <div class="MyNotes" [ngSwitch]="selection.value">
+      <div *ngSwitchDefault>
+          <app-login></app-login>
+          <div class="register_switch">
+            <div>Not registered yet ?</div>
+            <button class="signup_button" (click)="selection.value = 'signup'" tabindex="0">
+              <span>Signup</span>
+            </button>
+          </div>
+      </div>
+
+      <div *ngSwitchCase="'signup'">
+          <app-signup></app-signup>
+          <div class="register_switch">
+            <div>Alread registered ?</div>
+            <button class="login_button" (click)="selection.value = 'login'" tabindex="0">
+              <span>Login</span>
+            </button>
+          </div>
+      </div>
+
+    </div>
+  
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,32 @@
+.container {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    border: 2px;
+    border-style: dashed;
+    border-color: rgb(13, 103, 103);
+    border-radius: 6px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    padding: 1%;
+}
+
+.register_switch {
+    font-style: oblique;
+    color: rgba(59, 70, 70, 0.858);
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+}
+
+.register_switch button {
+    border: 0px;
+    font-weight: bold;
+    color: rgb(13, 103, 103);
+    background-color:rgb(255, 255, 255);
+    padding-left: 1em;
+}

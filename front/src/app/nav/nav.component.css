@@ -1,0 +1,18 @@
+.container {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: stretch;
+    padding: 1%;
+}
+
+button {
+    border: 0px;
+    font-weight: bold;
+    color: rgba(59, 70, 70, 0.858);
+    background-color:rgb(255, 255, 255);
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}

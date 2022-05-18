@@ -1,0 +1,81 @@
+<input type="hidden" #selection>
+
+<div [ngSwitch]="selection.value">
+
+    <div *ngSwitchDefault class="task">
+
+        <div class="task_name">{{ task.name }}</div>
+        <div class="task_date">Limit Date: {{ task.completionDate }}</div>
+        <div class="task_priority">
+            <span class="task_info">Priority: {{ task.priorityLvl }}</span>
+            <span class="task_info">Creator: {{ task.creator.username }}</span>
+            <div class="task_info">
+                Assigned to: 
+                <ng-container *ngFor="let user of task.assignedUsers">{{ user.username }} </ng-container>
+            </div>
+        </div>
+        <div class="task_notes">{{ task.notes }}</div>
+        <span *ngIf="task.completed" class="task_info_complete">This task is complete.</span>
+
+        <div class="task_nav">
+            <ng-container *ngIf="task.completed; else showThis">
+                <button class="btn btn-primary" type="submit" (click)="delete_task()">Delete</button>    
+            </ng-container>
+            <ng-template #showThis> 
+                <button class="btn btn-primary" type="submit" (click)="delete_task()">Delete</button>
+                <button class="btn btn-primary" type="submit" (click)="complete_task()">Mark as complete</button>
+                <form [formGroup]="assignForm" class="nav_form">
+                    <div class="form-group">
+                        <label for="user">Assign to: </label>
+                        <select name="user" class="form-control" formControlName="user">
+                            <ng-container *ngFor="let user of users">
+                                <option value="{{ user._id }}">{{user.username}}</option>
+                            </ng-container>                  
+                        </select>
+                    </div>
+                    <button type="submit" (click)="assign_to()">Assign</button>
+                </form>
+                <button class="edit_button" (click)="selection.value = 'edit'" tabindex="0">Edit</button>
+            </ng-template>
+
+        </div>
+
+    </div>
+
+    <div *ngSwitchCase="'edit'" class="task">
+
+        <div class="task_name">Edit task</div>
+
+        <div class="edit_form">
+        <form [formGroup]="editForm">            
+            <div class="form-group">
+                <label for="name">Name</label><br>
+                <input type="text" name="name" class="form-control" formControlName="name" placeholder="name">
+            </div>
+            <div class="form-group">
+                <label for="date">Limit date</label><br>
+                <input type="date" name="date" class="form-control" formControlName="date" placeholder="date">
+            </div>
+            <div class="form-group">
+                <label for="priority">Priority</label><br>
+                <select name="priority" class="form-control" formControlName="priority">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="notes">Notes</label><br>
+                <input type="text" name="notes" class="form-control" formControlName="notes" placeholder="notes">
+            </div>
+            <button class="btn btn-primary" type="submit" (click)="edit_task()">Edit</button>
+        </form>
+        </div>
+        
+        <div class="task_nav">
+            <button class="edit_button" (click)="selection.value = 'default'" tabindex="0">Back</button>
+        </div>
+
+    </div>
+
+</div>
