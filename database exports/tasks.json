@@ -1,0 +1,110 @@
+[{
+  "_id": {
+    "$oid": "628423a53737513325e5ad8c"
+  },
+  "name": "Do Laundry",
+  "notes": "Don't forget the socks",
+  "creator": {
+    "$oid": "6284235e3737513325e5ad81"
+  },
+  "completed": false,
+  "priorityLvl": 3,
+  "completionDate": {
+    "$date": {
+      "$numberLong": "1652918400000"
+    }
+  },
+  "assignedUsers": [
+    {
+      "$oid": "6284236e3737513325e5ad85"
+    },
+    {
+      "$oid": "6284235e3737513325e5ad81"
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628423d03737513325e5ad9f"
+  },
+  "name": "Buy tomatoes",
+  "notes": "",
+  "creator": {
+    "$oid": "6284235e3737513325e5ad81"
+  },
+  "completed": false,
+  "priorityLvl": 2,
+  "completionDate": {
+    "$date": {
+      "$numberLong": "1652745600000"
+    }
+  },
+  "assignedUsers": [
+    {
+      "$oid": "6284236e3737513325e5ad85"
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628423fb3737513325e5adc4"
+  },
+  "name": "Finish the WT assignment",
+  "notes": "",
+  "creator": {
+    "$oid": "6284235e3737513325e5ad81"
+  },
+  "completed": true,
+  "priorityLvl": 1,
+  "completionDate": {
+    "$date": {
+      "$numberLong": "1652572800000"
+    }
+  },
+  "assignedUsers": [
+    {
+      "$oid": "6284236e3737513325e5ad85"
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628424293737513325e5adee"
+  },
+  "name": "Check lnkedin",
+  "notes": "Also update CV",
+  "creator": {
+    "$oid": "6284235e3737513325e5ad81"
+  },
+  "completed": true,
+  "priorityLvl": 2,
+  "completionDate": {
+    "$date": {
+      "$numberLong": "1653696000000"
+    }
+  },
+  "assignedUsers": [
+    {
+      "$oid": "6284235e3737513325e5ad81"
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628424713737513325e5ae7b"
+  },
+  "name": "Prepare for the exams",
+  "notes": "",
+  "creator": {
+    "$oid": "6284236e3737513325e5ad85"
+  },
+  "completed": false,
+  "priorityLvl": 3,
+  "completionDate": {
+    "$date": {
+      "$numberLong": "1652832000000"
+    }
+  },
+  "assignedUsers": [],
+  "__v": 0
+}]

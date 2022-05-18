@@ -1,0 +1,38 @@
+[{
+  "_id": {
+    "$oid": "6284235e3737513325e5ad81"
+  },
+  "username": "tester",
+  "email": "tester.test@email.com",
+  "password": "$2b$10$YgvMdJygHRZ2rwn/rVFNg.RUEIv5DQgE7aChCACIQo4AdtB8Qp6jS",
+  "role": "member",
+  "assignedTasks": [
+    {
+      "$oid": "628423a53737513325e5ad8c"
+    },
+    {
+      "$oid": "628424293737513325e5adee"
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6284236e3737513325e5ad85"
+  },
+  "username": "Erin",
+  "email": "erin.grouille@epitech.eu",
+  "password": "$2b$10$oJZHZz1j4o11jCLAFLqtBehiQtM6.yzQyIMgyENX5gnkG3azZ27bW",
+  "role": "member",
+  "assignedTasks": [
+    {
+      "$oid": "628423a53737513325e5ad8c"
+    },
+    {
+      "$oid": "628423d03737513325e5ad9f"
+    },
+    {
+      "$oid": "628423fb3737513325e5adc4"
+    }
+  ],
+  "__v": 0
+}]
